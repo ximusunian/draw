@@ -70,6 +70,7 @@
             <span>奖品</span>
           </div>
           <div class="winners-main-box">
+            <div class="no-tips" v-if="winningList.length === 0">活动时间：2020-10-10 10:00:00 至 2020-10-13 23:59:59</div>
             <div class="swiper" v-if="winningList.length !== 0">
               <swiper :options="swiperOption">
                 <swiper-slide
@@ -807,6 +808,15 @@ export default {
     }
     .swiper-slide {
       margin-top: 0.45rem;
+    }
+    .no-tips {
+      height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      font-size: 0.2rem;
     }
     .swiper {
       padding-top: 0.2rem;

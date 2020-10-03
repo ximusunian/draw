@@ -53,8 +53,8 @@ module.exports = {
   // webpack-dev-server 相关配置
   devServer: {
     open: true,
-    host: "192.168.0.120",
-    port: 8100,
+    host: "localhost",
+    port: 8200,
     https: false,
     hotOnly: false,
     // http 代理配置
@@ -62,6 +62,7 @@ module.exports = {
       "/huitongyi": {
         target: 'http://120.55.95.100:8100',
         // target: 'http://192.168.0.139:8100',
+        // target: 'https://api.htyvip.com/huitongyi/',
         changeOrigin: true,
         pathRewrite: {
           "^/huitongyi": "huitongyi"
